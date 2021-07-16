@@ -33,7 +33,7 @@ async function main()
     {
         let _curr = mpthrees[mp];
         let _name = _curr.split('\\');
-        _name = _name[_name.length - 1].split('.')[0];
+        _name = _name[_name.length - 1];
         let _len  = await getAudioDurationInSeconds(_curr);
         test = ffmpeg().videoCodec('mpeg4').format('avi');
         test.input(preview)
